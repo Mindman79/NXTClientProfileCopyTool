@@ -10,42 +10,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        findUserFolders();
-//        findUserFolders2();
-//        findCertFiles();
+       findCertFolders();
     }
 
 
-    public static void findUserFolders() {
-
-        File userDirectories = new File("/Users");
-        File[] userFolderList = userDirectories.listFiles();
-
-        System.out.println("Users folder list:");
-
-        for (int i = 0; i < userDirectories.length(); i++) {
-            System.out.println(userFolderList[i]);
-            }
-    }
-
-
-    public static void findUserFolders2() {
-
-        File userDirectories = new File("/Users");
-        ArrayList<String> userFolderList = new ArrayList<String>();
-
-        File[] userFolderList = userDirectories.listFiles();
-
-        System.out.println("Users folder list:");
-
-        for (int i = 0; i < userDirectories.length(); i++) {
-            System.out.println(userFolderList[i]);
-        }
-    }
-
-
-
-    public static void findCertFiles() {
+    public static void findCertFolders() {
 
         File sourceFolder = new File("/Users/kirkhamt/AppData/Roaming/Lightspeed/NXTClient");
         FileFilter fileFilter = new WildcardFileFilter("*.pem");
